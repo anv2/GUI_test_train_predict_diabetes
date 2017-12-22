@@ -1,0 +1,25 @@
+@relation diabetes
+
+@attribute agefirsthaddiabetes numeric
+@attribute takeinsulinnow {1,2}
+@attribute smokeatleast100ciginlife {1,2}
+@attribute agestartedsmokingcigregularly numeric
+@attribute questionnairemodeflag {1,2}
+@attribute doctortoldyouhavediabetes {1,2}
+
+@data
+60,2,1,40,1, ? 
+60,2,1,42,1, ? 
+60,2,1,43,1, ? 
+60,2,1,46,1, ? 
+60,2,1,46,1, ? 
+60,2,1,48,1, ? 
+53,1,2,17,1, ? 
+54,1,2,17,1, ? 
+55,1,2,17,1, ? 
+55,1,2,17,1, ? 
+55,1,2,17,1, ? 
+55,1,2,17,1, ? 
+55,1,2,17,1, ? 
+55,1,2,17,1, ? 
+

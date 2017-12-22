@@ -1,0 +1,30 @@
+@relation QueryResult
+
+@attribute agefirsthaddiabetes numeric
+@attribute takeinsulinnow {2}
+@attribute smokeatleast100ciginlife {1}
+@attribute agestartedsmokingcigregularly numeric
+@attribute questionnairemodeflag {1}
+@attribute doctortoldyouhavediabetes {2}
+
+@data
+60,2,1,7,1,2
+60,2,1,7,1,2
+60,2,1,7,1,2
+60,2,1,8,1,2
+60,2,1,8,1,2
+60,2,1,8,1,2
+60,2,1,9,1,2
+60,2,1,9,1,2
+60,2,1,9,1,2
+60,2,1,9,1,2
+60,2,1,9,1,2
+60,2,1,10,1,2
+60,2,1,10,1,2
+60,2,1,10,1,2
+60,2,1,10,1,2
+60,2,1,11,1,2
+60,2,1,11,1,2
+60,2,1,11,1,2
+60,2,1,11,1,2
+60,2,1,11,1,2
