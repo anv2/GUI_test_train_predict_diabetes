@@ -5,18 +5,17 @@ Using multi-tiered application to train and visualize data
 
 Contents
 Introduction
-System Requirements & Installation
+System Requirements & Downloads
 Documentation of the Machine Learning Health Predictions
 Release Notes
 Bug Reports and Feedback
 Contents of the Application
-Runtime Environment
 Redistribution
 
 Introduction
 Thank you for downloading the codes for the graphic user interface that trains, tests, and predicts diabetes cases. The code is developed for the Java programming language.
 
-System Requirements & Installation
+System Requirements & Downloads
 Reading from the database requires the downloading of the Weka API, which is available at https://www.cs.waikato.ac.nz/ml/weka/ . 
 Modification of the DatabaseUtils.props file is needed to reflect your database connection. Instructions for this step is available at https://weka.wikispaces.com/Use+WEKA+in+your+Java+code .
 
@@ -52,7 +51,7 @@ Contents of the Application
 This application contains:
 
 Source Code: Four packages described above
-	CheckThisFile contains the following .java files: 
+	CheckThisFile package contains the following .java files: 
 		CompareTwoArrays
 		PrepareTableNN
 		PrepareTableSVM
@@ -71,16 +70,16 @@ Source Code: Four packages described above
 		MakeFile
 		Predict
 		UtilsWeka
-	AddSample packages contains the following .java files: 
+	AddSample package contains the following .java files: 
 		Connect
 		DisplayAddSample
 		SampleForDiabetes
-The .arff files that includes:
+The .arff files that include:
 	checkForAccuracy: contains answer key to be checked against the evaluated test results taken from the Evaluate.java class
 	combined: file with all training data that were used
 	combinedTest: file with all testing data that were used
-	fromDatabase:file containing training data from the database after the header had been appended, which happened in the MakeFile.java class
-	fromDatabaseTest:file containing testing data from the database after the header had been appended, which happened in the MakeFile.java class
+	fromDatabase:file containing training data from the database after the header had been appended, which is processed in the MakeFile.java class
+	fromDatabaseTest:file containing testing data from the database after the header had been appended, which is processed in the MakeFile.java class
 	headerDiabetes: contains information on formatted data type and their variable names in java files and database schema	
 
 Driver libraries 
