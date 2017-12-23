@@ -61,10 +61,8 @@ public class TableQuery {
 				{
 					data[row][col]= resultSet.getString(col+1);	
 					if (resultSet.getString(col+1).equals("2")){
-						//data[row][col] = "no";
 					}
 					if (resultSet.getString(col+1).equals("1")){
-						//data[row][col] = "yes";
 					}
 				}
 				//go to next row in resultset

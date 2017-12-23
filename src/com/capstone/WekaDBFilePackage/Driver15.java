@@ -20,18 +20,6 @@ public class Driver15 {
     public static void main(String[] args) {	
 
     		new DisplayJTable();
-       	
-    		//Evaluate e = new Evaluate();
-       	//CompareTwoArrays c = new CompareTwoArrays();
-    		Predict p = new Predict();
-       	//System.out.println( e.evaluateSVM());
-       	
-       	//e.evaluateTree();
-       	//c.compareArraysNumbersTree();
-       	//System.out.println( e.evaluateNN());
-    		//System.out.println( p.predictSVM( ));
-    		//System.out.print( p.predictNN( ));
-    		//System.out.print( p.predictDTree( ));    		
-    
+
     }
 }
