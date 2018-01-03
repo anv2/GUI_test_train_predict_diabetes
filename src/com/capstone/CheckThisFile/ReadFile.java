@@ -31,7 +31,7 @@ public class ReadFile {
 	public void openFile()
 	{
 		try{
-			input = new BufferedReader(new FileReader("/Users/vithia/Documents/workspace/WekaDBTestTrain/checkForAccuracy"));
+			input = new BufferedReader(new FileReader("WekaDBTestTrain/checkForAccuracy"));
 		}
 		catch(FileNotFoundException fileNotFoundException){
 			System.err.println("Cannot open file");

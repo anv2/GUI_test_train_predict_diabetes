@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.Apple-tab-span {white-space:pre}
+  </style>
+</head>
+<body>
+<p class="p1">README</p>
+<p class="p1">## Health Predictions:</p>
+<p class="p1">## Using multi-tiered application to train and visualize data</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1">Contents&lt;br /&gt;</p>
+<p class="p1">Introduction&lt;br /&gt;</p>
+<p class="p1">Downloads&lt;br /&gt;</p>
+<p class="p1">Documentation&lt;br /&gt;</p>
+<p class="p1">Notes&lt;br /&gt;</p>
+<p class="p1">Feedback&lt;br /&gt;</p>
+<p class="p1">Contents of the Application&lt;br /&gt;</p>
+<p class="p1">Redistribution&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">### Introduction</p>
+<p class="p1">The code is developed using Java 8 programming features with MySQL database. This application makes a graphic user interface (GUI) using Java swing components to accept user input and applying selected algorithms to data borrowed from the Centers for Disease Control and Prevention (CDC). Users may use the support vector machine (SVM), Neural Network, or Decision Tree. These algorithms are borrowed from the Weka API. Users are able to train, test, and predict data to support a diagnosis of diabetes. Correct results from testing are shown in green cells, while incorrect results are placed in red cells. Accuracy of tests are also given. <span class="Apple-converted-space">   </span></p>
+<p class="p2"><br></p>
+<p class="p1">### Downloads</p>
+<p class="p1">The algorithms for SVM, neural network, and decision tree were derived from the Weka API; its installation is available at https://www.cs.waikato.ac.nz/ml/weka/ .&lt;br /&gt;&lt;br /&gt;</p>
+<p class="p1">Modification of the DatabaseUtils.props file is needed to reflect your database connection. Instructions for this step is available at https://weka.wikispaces.com/Use+WEKA+in+your+Java+code .&lt;br /&gt;&lt;br /&gt;</p>
+<p class="p1">In addition, the RDBMS MySQL database was used. Instructions for setup of MySQL could be found at https://www.mysql.com/downloads/ .</p>
+<p class="p1">This application was written with Java SE 8. The latest Java language is preferred, but older versions may be acceptable.<span class="Apple-converted-space"> </span></p>
+<p class="p1">It was also written using Eclipse IDE with Java plugins. &lt;br /&gt;&lt;br /&gt;</p>
+<p class="p1">Instruction on its installation is available at http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neonr . &lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">### Documentation</p>
+<p class="p1">There are four packages: CheckThisFile, JTablePackage, WekaDBFilePackage, and addSample packages .</p>
+<p class="p1">##### CheckThisFile Package</p>
+<p class="p1">The “CheckThisFile” package reads correct answers from a text file, and place these key values into an arraylist (ReadFile.java). The CompareTwoArrays.java class compares arrays from the ReadFile.java class against the test results taken from the Evaluate.java class (that is located in the WekaDBFilePackage package). In addition, the CompareTwoArrays.java class also calculates the accuracy of the evaluation. Tables displaying the results using any of the three algorithms, SVM, Neural Network, and Decision Tree are contained in PrepareTableSVM, PrepareTableNN, and PrepareTableTree classes, respectively.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">##### JTablePackage Package</p>
+<p class="p1">The “JTablePackage” package contains the DisplayJTable.java class that orchestrates the calling of logics from many other classes (Evaluate.java, MakeFile.java, Predict.java, Connect.java, and DisplayAddSample.java, CompareTwoArrays.java, and CheckThisFile.java classes). The main purpose of the DisplayJTable.java class is to render the graphic user interface using logics from the aforementioned classes. The TableQuery.java class establish JDBC connection with the schema called “diabetes” in MySQL on port 3306 of localhost. Methods in this TableQuery.java class displays datasets that were used for training and testing, which are provided by the TableTrain.java TableTest.java classes, respectively.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">##### WekaDBFilePackage Package</p>
+<p class="p1">WekaDBFilePackage contains the main class, called Driver15.java. In addition, it also contains DatabaseQueries.java class that returns the fields of a sample (person being tested for diabetes) and getInstanceDataFromDatabase.java class that gets instances from the database. The UtilsWeka.java class creates instances from data written in .arff files.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">The Evaluate.java class builds classifiers for each algorithm and returns the results as array lists.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">Because Weka is designed to use data written in .arff file format, the usage of data from a database in our case must be reformatted from database to .arff file format. This is achieved by taking instances from the database, then appending the header that is formatted to match .arff file format described by Weka. In our case the conversion of database instances to meet the .arff file format is written in the MakeFile.java class.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">An important function of machine learning is the ability to predict the outcome of data with unknown value; this is done in the Predict.java class. Prediction is made for the last sample added to be tested.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">##### AddSample Package</p>
+<p class="p1">AddSample package connects to the JDBC diabetes schema (Connect.java class) to allow the function of adding new samples to be tested. The user interface is created in DisplayAddSample.java class. The SampleForDiabetes.java class is the entity class containing fields and getters and setters for the sample.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">Documentation of the java code is provided within each class file.&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">### Notes</p>
+<p class="p1">Please check the comment section on GitHub for version information.</p>
+<p class="p2"><br></p>
+<p class="p1">### Feedback</p>
+<p class="p1">Comments are welcomed. Please collaborate!</p>
+<p class="p2"><br></p>
+<p class="p1">### Contents of the Application</p>
+<p class="p1">This application contains:&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">##### Source Code:<span class="Apple-converted-space"> </span></p>
+<p class="p1">Four packages described above&lt;br /&gt;</p>
+<p class="p1">##### CheckThisFile package contains the following .java files:</p>
+<p class="p1">CompareTwoArrays&lt;br /&gt;</p>
+<p class="p1">PrepareTableNN&lt;br /&gt;</p>
+<p class="p1">PrepareTableSVM&lt;br /&gt;</p>
+<p class="p1">PrepareTableTree&lt;br /&gt;</p>
+<p class="p1">ReadFile&lt;br /&gt;</p>
+<p class="p1">##### JTablePackage contains the following .java files:</p>
+<p class="p1">DisplayJTable&lt;br /&gt;</p>
+<p class="p1">TableQuery&lt;br /&gt;</p>
+<p class="p1">TableTest&lt;br /&gt;</p>
+<p class="p1">TableTrain&lt;br /&gt;</p>
+<p class="p1">##### WekaDBFilePackage contains the following .java files:</p>
+<p class="p1">DatabaseQueries&lt;br /&gt;</p>
+<p class="p1">Driver15&lt;br /&gt;</p>
+<p class="p1">Evaluate&lt;br /&gt;</p>
+<p class="p1">InstancesFromDatabase&lt;br /&gt;</p>
+<p class="p1">MakeFile&lt;br /&gt;</p>
+<p class="p1">Predict&lt;br /&gt;</p>
+<p class="p1">UtilsWeka&lt;br /&gt;</p>
+<p class="p1">##### AddSample package contains the following .java files:</p>
+<p class="p1">Connect&lt;br /&gt;</p>
+<p class="p1">DisplayAddSample&lt;br /&gt;</p>
+<p class="p1">SampleForDiabetes&lt;br /&gt;</p>
+<p class="p1">##### The .arff files that include:</p>
+<p class="p1">checkForAccuracy: contains answer key to be checked against the evaluated test results taken from the Evaluate.java class&lt;br /&gt;</p>
+<p class="p1">combined: file with all training data &lt;br /&gt;</p>
+<p class="p1">combinedTest: file with all testing data &lt;br /&gt;</p>
+<p class="p1">fromDatabase:file containing training data from the database after the header had been appended, which is processed in the MakeFile.java class&lt;br /&gt;</p>
+<p class="p1">fromDatabaseTest:file containing testing data from the database after the header had been appended, which is processed in the MakeFile.java class&lt;br /&gt;</p>
+<p class="p1">headerDiabetes: contains information on formatted data type and their variable names in java files and database schema&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">Drivers to MySQL and Weka&lt;br /&gt;</p>
+<p class="p2"><span class="Apple-tab-span">	</span></p>
+<p class="p1">Power point slides to show an overview of data flow, UML diagram, and appearance of GUI&lt;br /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">### Redistribution</p>
+<p class="p1">Please distribute with citation:&lt;br /&gt;</p>
+<p class="p1">An, Vithia (2017). Health Predictions (Version 1.0) [Source code]. http://github.com/anv2/GUI_test_train_predict_diabetes</p>
+</body>
+</html>

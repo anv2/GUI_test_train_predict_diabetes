@@ -26,7 +26,7 @@ public class Predict {
 	// @return the predicted value
 	public String predictSVM() {
 		try{
-			DataSource dataTrain = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combined.arff");
+			DataSource dataTrain = new DataSource("WekaDBTestTrain/combined.arff");
 		    Instances dataset = dataTrain.getDataSet();    		
 	        
 		    //set class index to the last attribute
@@ -36,7 +36,7 @@ public class Predict {
 	        SMO svm = new SMO();
 	        svm.buildClassifier(dataset);
 	        
-	        DataSource dataTest = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combinedTest.arff");
+	        DataSource dataTest = new DataSource("WekaDBTestTrain/combinedTest.arff");
 	        Instances testDataset = dataTest.getDataSet();
 	        
 	        //set class index to the last attribute
@@ -62,7 +62,7 @@ public class Predict {
 	public String predictNN() {
 		try {
 			DataSource dataTrain = new DataSource(
-					"/Users/vithia/Documents/workspace/WekaDBTestTrain/combined.arff");
+					"WekaDBTestTrain/combined.arff");
 			Instances dataset = dataTrain.getDataSet();
 			// set class index to the last attribute
 			dataset.setClassIndex(dataset.numAttributes() - 1);
@@ -70,7 +70,7 @@ public class Predict {
 			MultilayerPerceptron mlp = new MultilayerPerceptron();
 			mlp.buildClassifier(dataset);
 
-	        DataSource dataTest = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combinedTest.arff");
+	        DataSource dataTest = new DataSource("WekaDBTestTrain/combinedTest.arff");
 	        Instances testDataset = dataTest.getDataSet();
 	        
 	        //set class index to the last attribute
@@ -95,7 +95,7 @@ public class Predict {
 	public String predictDTree() {
 		try {
 			DataSource dataTrain = new DataSource(
-					"/Users/vithia/Documents/workspace/WekaDBTestTrain/combined.arff");
+					"WekaDBTestTrain/combined.arff");
 			Instances dataset = dataTrain.getDataSet();
 			// set class index to the last attribute
 			dataset.setClassIndex(dataset.numAttributes() - 1);
@@ -103,7 +103,7 @@ public class Predict {
 			J48 tree = new J48();
 			tree.buildClassifier(dataset);
 
-	        DataSource dataTest = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combinedTest.arff");
+	        DataSource dataTest = new DataSource("WekaDBTestTrain/combinedTest.arff");
 	        Instances testDataset = dataTest.getDataSet();
 	        
 	        //set class index to the last attribute

@@ -34,7 +34,7 @@ public class Evaluate {
 	{	
 		try
 		{
-		DataSource dataTrain = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combined.arff");
+		DataSource dataTrain = new DataSource("WekaDBTestTrain/combined.arff");
 	    Instances dataset = dataTrain.getDataSet();
           		
         //set class index to the last attribute
@@ -45,7 +45,7 @@ public class Evaluate {
         
         Evaluation eval = new Evaluation(dataset);
         
-        DataSource dataTest = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combinedTest.arff");
+        DataSource dataTest = new DataSource("WekaDBTestTrain/combinedTest.arff");
         Instances testDataset = dataTest.getDataSet();
         //set class index to the last attribute
         testDataset.setClassIndex(testDataset.numAttributes()-1);
@@ -77,7 +77,7 @@ public class Evaluate {
 		try
 		{
 			
-		DataSource dataTrain = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combined.arff");
+		DataSource dataTrain = new DataSource("WekaDBTestTrain/combined.arff");
 	    Instances dataset = dataTrain.getDataSet();    		
         //set class index to the last attribute
         dataset.setClassIndex(dataset.numAttributes()-1);
@@ -87,7 +87,7 @@ public class Evaluate {
         
         Evaluation eval = new Evaluation(dataset);
 
-        DataSource dataTest = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combinedTest.arff");
+        DataSource dataTest = new DataSource("WekaDBTestTrain/combinedTest.arff");
         Instances testDataset = dataTest.getDataSet();
         //set class index to the last attribute
         testDataset.setClassIndex(testDataset.numAttributes()-1);
@@ -119,7 +119,7 @@ public class Evaluate {
 	{	
 		try
 		{
-		DataSource dataTrain = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combined.arff");
+		DataSource dataTrain = new DataSource("WekaDBTestTrain/combined.arff");
 	    Instances dataset = dataTrain.getDataSet();
           		
         //set class index to the last attribute
@@ -130,7 +130,7 @@ public class Evaluate {
         
         Evaluation eval = new Evaluation(dataset);
                       
-        DataSource dataTest = new DataSource("/Users/vithia/Documents/workspace/WekaDBTestTrain/combinedTest.arff");
+        DataSource dataTest = new DataSource("WekaDBTestTrain/combinedTest.arff");
         Instances testDataset = dataTest.getDataSet();
         //set class index to the last attribute
         testDataset.setClassIndex(testDataset.numAttributes()-1);

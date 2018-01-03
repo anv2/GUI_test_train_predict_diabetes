@@ -14,7 +14,7 @@ import com.capstone.JTablePackage.TableTest;
  */
 public class Connect {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/diabetes";
+    private static final String URL = "jdbc:mysql://localhost:portNumber/diabetes";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 
