@@ -91,4 +91,4 @@ Power point slides to show an overview of data flow, UML diagram, and appearance
 
 ### Distribution</br>
 Please distribute with citation:</br>
-An, Vithia (2017). Health Predictions (Version 1.0) [Source code]. http://github.com/anv2/GUI_test_train_predict_diabetes.</br>
+An, Vithia (2018). Health Predictions (Version 1.0) [Source code]. http://github.com/anv2/GUI_test_train_predict_diabetes.</br>
