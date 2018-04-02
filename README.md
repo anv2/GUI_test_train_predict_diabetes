@@ -13,7 +13,7 @@ Citation</br>
 ### Introduction</br>
 This application was developed with Java 8 programming features and MySQL database. It presents a graphic user interface (GUI) using Java swing components and accepts user input. The input selects an algorithm to be used on data borrowed from the Centers for Disease Control and Prevention (CDC). Users may select from the support vector machine (SVM), Neural Network, or Decision Tree. The algorithms are borrowed from the Weka API. Users are able to train, test, and predict which patients are at risk for diabetes. Correct results from this evaluation are shown in green cells, while incorrect results are placed in red cells. Accuracy of evaluation is also given. </br>
 
-![image|67x72]()
+![image|67x72](https://github.com/anv2/GUI_test_train_predict_diabetes/blob/master/images/Screen%20Shot%202018-04-02%20at%202.56.58%20PM.png)
 
 ### Downloads</br>
 The algorithms for SVM, neural network, and decision tree are derived from the Weka API; its installation is available at https://www.cs.waikato.ac.nz/ml/weka/ </br>
