@@ -6,13 +6,14 @@ Contents</br>
 Introduction</br>
 Downloads</br>
 Documentation</br>
-Notes</br>
 Feedback</br>
 Contents of the Application</br>
-Distribution</br>
+Citation</br>
 
 ### Introduction</br>
 This application was developed with Java 8 programming features and MySQL database. It presents a graphic user interface (GUI) using Java swing components and accepts user input. The input selects an algorithm to be used on data borrowed from the Centers for Disease Control and Prevention (CDC). Users may select from the support vector machine (SVM), Neural Network, or Decision Tree. The algorithms are borrowed from the Weka API. Users are able to train, test, and predict which patients are at risk for diabetes. Correct results from this evaluation are shown in green cells, while incorrect results are placed in red cells. Accuracy of evaluation is also given. </br>
+
+![image|67x72]()
 
 ### Downloads</br>
 The algorithms for SVM, neural network, and decision tree are derived from the Weka API; its installation is available at https://www.cs.waikato.ac.nz/ml/weka/ </br>
@@ -43,11 +44,8 @@ AddSample package connects to the JDBC diabetes schema (Connect.java class) to e
 
 Documentation of the java code is provided within each class file</br>
 
-### Notes</br>
-Please check the comment section on GitHub for version information.</br>
-
 ### Feedback</br>
-Comments are welcomed. Please collaborate!</br>
+Comments are welcomed.</br>
 
 ### Contents of the Application</br>
 This application contains:</br>
@@ -89,6 +87,5 @@ Drivers to MySQL and Weka.</br>
 
 Power point slides to show an overview of data flow, UML diagram, and appearance of GUI.</br>
 
-### Distribution</br>
-Please distribute with citation:</br>
+### Citation</br>
 An, Vithia (2018). Health Predictions (Version 1.0) [Source code]. http://github.com/anv2/GUI_test_train_predict_diabetes.</br>
